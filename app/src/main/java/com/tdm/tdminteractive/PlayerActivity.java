@@ -370,7 +370,6 @@ public class PlayerActivity extends AppCompatActivity {
                         event = new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_UP);
                         break;
                     case SigmaWebView.KEYCODE_DOWN:
-//                        event = new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_DOWN);
                         btnGuest.requestFocus();
                         ((WebView) _interactiveWebview).setFocusable(true);
                         ((WebView) _interactiveWebview).clearFocus();
@@ -444,17 +443,7 @@ public class PlayerActivity extends AppCompatActivity {
             public void onSetSession(String s) {
 
                 Log.d("_interactiveWebview", "onSetSession " + s);
-//                try {
-//                    JSONObject jsonObject = new JSONObject(s);
-//
-//                    ((WebView) _interactiveWebview).setFocusable(true);
-//                    ((WebView) _interactiveWebview).requestFocus();
-//                    _interactiveWebview.sendOnReadyBack(new Gson().toJson(getUserOption(token, currrchannelId)));
-//                    ((WebView) _interactiveWebview).reload();
-//
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
+
             }
         });
 
@@ -465,44 +454,6 @@ public class PlayerActivity extends AppCompatActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         Log.d("onKeyDownMain", keyCode + "");
 
-//        switch (keyCode) {
-//            case KeyEvent.KEYCODE_DPAD_UP: {
-//                //up channel
-//                if (currentIndex >= (urlChannels.length - 1)) {
-//                    currentIndex = 0;
-//                } else {
-//                    currentIndex++;
-//                }
-//                initPlayer(currentIndex);
-//            }
-//            case KeyEvent.KEYCODE_DPAD_DOWN: {
-//                //down channel
-//                if (currentIndex <= 0) {
-//                    currentIndex = urlChannels.length - 1;
-//                } else {
-//                    currentIndex--;
-//                }
-//                initPlayer(currentIndex);
-//            }
-//            case KeyEvent.KEYCODE_ENTER:
-//            case KeyEvent.KEYCODE_DPAD_CENTER: {
-////                if (layoutViewGroup.getVisibility() == View.VISIBLE) {
-////                    layoutViewGroup.setVisibility(View.INVISIBLE);
-////                } else {
-////                    ((RelativeLayout) _interactiveWebview).requestFocus();
-////                    layoutViewGroup.clearFocus();
-////                }
-//            }
-//        }
-//        if (keyCode == KeyEvent.KEYCODE_BACK) {
-//            if (isInteractive) {
-//                Log.d("onKeyDownMain", "back");
-//                _interactiveWebview.sendKeyBack();
-//            }
-//            return true;
-//        } else {
-//            return super.onKeyDown(keyCode, event);
-//        }
         return super.onKeyDown(keyCode, event);
 
     }
